@@ -17,7 +17,7 @@ sort -u ~/.ssh/authorized_keys -o ~/.ssh/authorized_keys
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/authorized_keys
 
-rm -f /etc/ssh/sshd_config.d/01-delonix.conf
+rm -rf /etc/ssh/sshd_config.d/*
 
 grep -q "^PasswordAuthentication" $SSHD_CONFIG && sed -i 's/^.*PasswordAuthentication.*/PasswordAuthentication no/' $SSHD_CONFIG || echo "PasswordAuthentication no" >> $SSHD_CONFIG
 
