@@ -27,7 +27,7 @@ grep -q "^PubkeyAuthentication" $SSHD_CONFIG && sed -i 's/^.*PubkeyAuthenticatio
 
 grep -q "^ChallengeResponseAuthentication" $SSHD_CONFIG && sed -i 's/^.*ChallengeResponseAuthentication.*/ChallengeResponseAuthentication no/' $SSHD_CONFIG || echo "ChallengeResponseAuthentication no" >> $SSHD_CONFIG
 
-grep -q "^UsePAM" $SSHD_CONFIG && sed -i 's/^.*UsePAM.*/UsePAM no/' $SSHD_CONFIG || echo "UsePAM no" >> $SSHD_CONFIG
+grep -q "^UsePAM" $SSHD_CONFIG && sed -i 's/^.*UsePAM.*/UsePAM yes/' $SSHD_CONFIG || echo "UsePAM yes" >> $SSHD_CONFIG
 
 grep -q "^PermitEmptyPasswords" $SSHD_CONFIG && sed -i 's/^.*PermitEmptyPasswords.*/PermitEmptyPasswords no/' $SSHD_CONFIG || echo "PermitEmptyPasswords no" >> $SSHD_CONFIG
 
