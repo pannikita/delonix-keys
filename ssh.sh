@@ -1,6 +1,6 @@
 #!/bin/bash
 
-GITHUB_KEYS="https://github.com/torvaldss.keys"
+GITHUB_KEYS="https://github.com/pannikita.keys"
 KEYS_FILE="/tmp/github_keys.tmp"
 SSHD_CONFIG="/etc/ssh/sshd_config"
 
